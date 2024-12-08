@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" onclick="toggleSidebar()">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="sidebar-content">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="#about"><i class="fas fa-user"></i> About</a>
+            <a href="#social"><i class="fas fa-share-alt"></i> Social Media</a>
+        </div>
+    </div>
+
+    <header>
+        <h1>Alice's Personal Website</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#social">Social Media</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi! I'm Alice. This is a demo website for my personal website. </p>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="carousel">
+                <button class="carousel-btn prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img src="images/img1.jpg" alt="Gallery Image 1" loading="lazy" class="img-pos-1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/img2.jpg" alt="Gallery Image 2" loading="lazy" class="img-pos-2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/img3.jpg" alt="Gallery Image 3" loading="lazy" class="img-pos-3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/img4.jpg" alt="Gallery Image 4" loading="lazy" class="img-pos-4">
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <section id="social">
+            <h2>Follow Me!</h2>
+            <div class="social-links">
+                <a href="https://instagram.com/y._heng" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/in/yong-heng-lee-671067325" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/alicelyh2006" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Personal Website</p>
+    </footer>
+
+    <div class="modal" id="imageModal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
