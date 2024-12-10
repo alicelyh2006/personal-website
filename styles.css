@@ -368,15 +368,17 @@ footer {
 @media screen and (max-width: 768px) {
     /* Adjust menu icon position */
     .menu-icon {
-        top: 1rem;
+        top: 1.5rem;
         left: 1rem;
         font-size: 1.2rem;
     }
 
     /* Add padding to header to prevent overlap */
     header {
-        padding: 1rem;
-        padding-left: 3rem; /* Make space for menu icon */
+        padding: 1.5rem;
+        padding-left: 3rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
     
     /* Adjust header title size */
@@ -385,6 +387,7 @@ footer {
         line-height: 1.2;
         max-height: 2.4em;
         overflow: hidden;
+        margin-top: 0.5rem;
     }
 
     /* Hide navigation bar on mobile */
