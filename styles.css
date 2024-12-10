@@ -366,9 +366,17 @@ footer {
 
 /* Add media queries for mobile responsiveness */
 @media screen and (max-width: 768px) {
-    /* Hide navigation bar on mobile */
-    header nav {
-        display: none;
+    /* Adjust menu icon position */
+    .menu-icon {
+        top: 1rem;
+        left: 1rem;
+        font-size: 1.2rem;
+    }
+
+    /* Add padding to header to prevent overlap */
+    header {
+        padding: 1rem;
+        padding-left: 3rem; /* Make space for menu icon */
     }
     
     /* Adjust header title size */
@@ -379,12 +387,12 @@ footer {
         overflow: hidden;
     }
 
-    /* Adjust header padding */
-    header {
-        padding: 1rem;
+    /* Hide navigation bar on mobile */
+    header nav {
+        display: none;
     }
 
-    /* Adjust other mobile-specific styles */
+    /* Other mobile adjustments */
     main {
         padding: 0.5rem;
     }
