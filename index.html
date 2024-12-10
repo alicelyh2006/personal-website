@@ -19,6 +19,8 @@
         <div class="sidebar-content">
             <a href="index.html"><i class="fas fa-home"></i> Home</a>
             <a href="#about"><i class="fas fa-user"></i> About</a>
+            <a href="#gallery"><i class="fas fa-image"></i> Gallery</a>
+            <a href="#music"><i class="fas fa-music"></i> Music</a>
             <a href="#social"><i class="fas fa-share-alt"></i> Social Media</a>
         </div>
     </div>
@@ -27,6 +29,8 @@
         <h1>Alice's Personal Website</h1>
         <nav>
             <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#music">Music</a>
             <a href="#social">Social Media</a>
         </nav>
     </header>
@@ -34,7 +38,7 @@
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>Hi! I'm Alice. This is a demo website for my personal website. </p>
+            <p>Sharing parts of my life with you <i class="far fa-heart"></i></p>
         </section>
 
         <section id="gallery">
@@ -57,11 +61,70 @@
                         <div class="carousel-slide">
                             <img src="images/img4.jpg" alt="Gallery Image 4" loading="lazy" class="img-pos-4">
                         </div>
+                        <div class="carousel-slide">
+                            <img src="images/img5.jpg" alt="Gallery Image 5" loading="lazy" class="img-pos-5">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/img6.jpg" alt="Gallery Image 6" loading="lazy" class="img-pos-6">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/img7.jpg" alt="Gallery Image 7" loading="lazy" class="img-pos-7">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/img8.jpg" alt="Gallery Image 8" loading="lazy" class="img-pos-8">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/img9.jpg" alt="Gallery Image 9" loading="lazy" class="img-pos-9">
+                        </div>
                     </div>
                 </div>
                 <button class="carousel-btn next">
                     <i class="fas fa-chevron-right"></i>
                 </button>
+            </div>
+        </section>
+
+        <section id="music">
+            <h2>Favourite Songs</h2>
+            <div class="music-grid">
+                <div class="music-card">
+                    <a href="https://youtu.be/XX0uyYxda54?si=4W7qMHOxNplgJ8yP" 
+                       target="_blank" 
+                       class="play-btn" 
+                       title="Listen on YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <div class="music-info">
+                        <h3>我会等</h3>
+                        <p>魏大勋</p>
+                    </div>
+                </div>
+
+                <div class="music-card">
+                    <a href="https://youtu.be/1Z0AEwaxrbY?si=jhMJMKCBrxMMu3eC" 
+                       target="_blank" 
+                       class="play-btn" 
+                       title="Listen on YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <div class="music-info">
+                        <h3>Tell Me It's Not A Dream</h3>
+                        <p>10CM</p>
+                    </div>
+                </div>
+
+                <div class="music-card">
+                    <a href="https://youtu.be/pZ1NdE69VTs?si=18U0ol4NYux5lpnT" 
+                       target="_blank" 
+                       class="play-btn" 
+                       title="Listen on YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <div class="music-info">
+                        <h3>Number One Girl</h3>
+                        <p>ROSÉ</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -84,11 +147,6 @@
     <footer>
         <p>&copy; 2024 My Personal Website</p>
     </footer>
-
-    <div class="modal" id="imageModal">
-        <span class="modal-close">&times;</span>
-        <img class="modal-content" id="modalImage">
-    </div>
 
     <script src="script.js"></script>
 </body>
