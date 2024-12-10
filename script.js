@@ -64,16 +64,42 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function updateSlidePosition(goingRight = true, oldIndex = null) {
         if (oldIndex === slides.length - 1 && currentIndex === 0 && goingRight) {
-            // When going from last to first slide, continue moving right
+            // Clone first slide and append it temporarily
+            const firstSlideClone = slides[0].cloneNode(true);
+            track.appendChild(firstSlideClone);
+            
+            // Move to cloned slide
+            track.style.transition = 'transform 0.3s ease';
             track.style.transform = `translateX(-${slides.length * 100}%)`;
+            
+            // After transition, instantly jump back to first slide
             setTimeout(() => {
                 track.style.transition = 'none';
-                track.style.transform = `translateX(0%)`;
-                setTimeout(() => {
-                    track.style.transition = 'transform 0.3s ease';
-                }, 10);
+                track.style.transform = `translateX(0)`;
+                track.removeChild(firstSlideClone);
+            }, 300);
+        } else if (oldIndex === 0 && currentIndex === slides.length - 1 && !goingRight) {
+            // Clone all slides and prepend them temporarily
+            const trackClone = track.cloneNode(true);
+            track.insertBefore(trackClone, track.firstChild);
+            
+            // Start from last slide of the clone
+            track.style.transition = 'none';
+            track.style.transform = `translateX(${slides.length * 100}%)`;
+            
+            // Force browser reflow
+            track.offsetHeight;
+            
+            // Move to actual last slide
+            track.style.transition = 'transform 0.3s ease';
+            track.style.transform = `translateX(-${(slides.length - 1) * 100}%)`;
+            
+            // After transition, clean up
+            setTimeout(() => {
+                track.removeChild(trackClone);
             }, 300);
         } else {
+            track.style.transition = 'transform 0.3s ease';
             track.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
     }
@@ -86,40 +112,4 @@ document.addEventListener('DOMContentLoaded', function() {
         clearInterval(autoSlideInterval);
         startAutoSlide();
     }
-}); 
-
-// Add image modal functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImage');
-    const closeBtn = document.getElementsByClassName('modal-close')[0];
-    
-    // Add click event to all carousel images
-    document.querySelectorAll('.carousel-slide img').forEach(img => {
-        img.onclick = function() {
-            modal.style.display = 'block';
-            modalImg.src = this.src;
-            // Preserve the specific object-position for the modal image
-            modalImg.style.objectPosition = window.getComputedStyle(this).objectPosition;
-        }
-    });
-    
-    // Close modal when clicking X
-    closeBtn.onclick = function() {
-        modal.style.display = 'none';
-    }
-    
-    // Close modal when clicking outside the image
-    modal.onclick = function(e) {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-        }
-    }
-    
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.style.display === 'block') {
-            modal.style.display = 'none';
-        }
-    });
 }); 
