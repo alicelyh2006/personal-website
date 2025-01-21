@@ -389,7 +389,7 @@ footer {
         overflow: hidden;
         margin-top: 0.5rem;
     }
-    
+
     /* Hide navigation bar on mobile */
     header nav {
         display: none;
@@ -417,4 +417,72 @@ footer {
         padding: 1rem;
     }
 }
- 
+
+/* Add these Project Section Styles */
+#project {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.project-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.project-info p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Add mobile responsiveness for projects */
+@media screen and (max-width: 768px) {
+    .project-grid {
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+    
+    .project-card img {
+        height: 180px;
+    }
+    
+    .project-info {
+        padding: 1rem;
+    }
+}
