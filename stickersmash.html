@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StickerSmash Project - Alice's Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Same sidebar and menu icon as index.html -->
+    <div class="menu-icon" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" onclick="toggleSidebar()">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="sidebar-content">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="index.html#about"><i class="fas fa-user"></i> About</a>
+            <a href="index.html#gallery"><i class="fas fa-image"></i> Gallery</a>
+            <a href="index.html#music"><i class="fas fa-music"></i> Music</a>
+            <a href="index.html#social"><i class="fas fa-share-alt"></i> Social Media</a>
+        </div>
+    </div>
+
+    <header>
+        <h1>StickerSmash</h1>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-post">
+            <div class="post-header">
+                <h2>StickerSmash: A React Native Journey</h2>
+                <div class="post-meta">
+                    <span class="post-date"><i class="far fa-calendar"></i> January 2025</span>
+                </div>
+            </div>
+            
+            <p>Scrolling through Google and found out this step-by-step tutorial to build an app by Beto!</p>
+            <div class="resource-links">
+                <a href="https://youtube.com/playlist?list=PLsXDmrmFV_AT6I9knFlpzP61_appiRTNP&si=Wjiw-aOTDjP4B3Ye" target="_blank" class="resource-btn youtube">
+                    <i class="fab fa-youtube"></i>
+                    <span>Tutorial Playlist</span>
+                </a>
+                <a href="https://reactnative.dev/docs/environment-setup" target="_blank" class="resource-btn setup">
+                    <i class="fas fa-cog"></i>
+                    <span>Environment Setup</span>
+                </a>
+                <a href="https://docs.expo.dev/tutorial/introduction/" target="_blank" class="resource-btn docs">
+                    <i class="fas fa-book"></i>
+                    <span>StickerSmash Tutorial</span>
+                </a>
+            </div>
+            <div class="post-content">
+                <p>Beto explained everything clearly and the tutorial was really easy to follow. However, being a perfectionist and a complete beginner at the same time, I still faced a lot of challenges. Here’s what happened:</p>
+                <p><b>Too Many Files Appeared Suddenly:</b> Once I created a project following the tutorial, numerous files and folders popped up, leaving me confused.</p>
+                <p><b>Accidentally Deleted Important Files:</b> In my confusion, I ended up deleting some crucial files, which made the project unusable.</p>    
+                <p><b>Lost Track of My Project Location:</b> I didn’t know where the command saved my project, so finding it later was another challenge.</p>    
+                <p> If you’re in the same boat, don’t worry—I’ve learned a few tricks to navigate these problems and will share them here.</p>    
+                
+                <h2>How to Delete Your Project Completely</h2>
+                <p>So, the very first thing I'm gonna talk about here is how to delete your project completely. If you’ve accidentally created a mess (like I did), you can delete your project with this command:</p>
+                <pre><code>Remove-Item -Path "path-route" -Recurse -Force</code></pre>
+                <p style="margin-bottom: 0.5rem">What This Does (Thank you ChatGPT for the info!):</p>
+                    <ul style="margin-bottom: 0.5rem; padding-left: 2rem">
+                        <li><b>Remove-Item:</b> Deletes files and folders.</li>
+                        <li><b>-Path:</b> Specifies the location of the folder to delete. Replace "path-route" with the actual path to your project.</li>
+                        <li><b>-Recurse:</b> Ensures all subfolders and files are also deleted.</li>
+                        <li><b>-Force:</b> Forces deletion without additional confirmation.</li>
+                    </ul>
+                    
+                    
+                <p><b>Caution:</b> Double-check the path you’re about to delete. This command is powerful and can permanently remove important files if you’re not careful.</p>
+                
+                <h2>How to Find Your Project Folder</h2>
+                <p>If you’re not sure where your project folder is located, don’t panic. The terminal already tells you the location:</p>
+                <pre><code>C:\Users\YourName\Projects\MyApp</code></pre>
+                <p>Look at the path route displayed in your terminal after you create a project. This is the directory where your files are stored. Simply just follow the directory in your file explorer and you'll find your project!</p>
+                <p style="margin-bottom: 0.5rem">To navigate to this folder manually: (Thank you ChatGPT again hahaha):</p>
+                <ul style="margin-bottom: 0.5rem; padding-left: 2rem">
+                    <li>Open your file explorer.</li>
+                    <li>Copy the path route from the terminal.</li>
+                    <li>Paste it into the address bar of your file explorer and press Enter.</li>
+                </ul>
+
+                <p> </p>
+                <h2>My Takeaways</h2>
+                <p>These challenges taught me a few important lessons:</p>
+                <p><b>Take It Slow:</b> It’s okay to pause the tutorial and understand what each step is doing.</p>
+                <p><b>Read the Terminal Carefully:</b> It often contains valuable information, like the path to your project folder.</p>    
+                <p>By learning from mistakes and experimenting, I’ve started to feel more confident. If you’re also starting out, I hope this guide saves you some of the headaches I faced. Happy coding!</p>    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; My Personal Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
