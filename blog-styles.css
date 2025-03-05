@@ -109,6 +109,72 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+.fragments {
+    display: flex;
+    flex-direction: column;  /* 改为纵向排列 */
+    align-items: center;
+    width: 100%;
+}
+
+.fragments-title {
+    margin-bottom: 2rem;  /* 在标题和轮播图之间添加间距 */
+    text-align: center;
+}
+
+.fragments .carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.fragments .carousel-container {
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.fragments .carousel-slide {
+    min-width: 100%;  /* 确保每个slide占据完整宽度 */
+    flex-shrink: 0;   /* 防止slide被压缩 */
+    display: flex;     /* 使用flex布局居中图片 */
+    justify-content: center;
+    align-items: center;
+}
+
+.fragments .carousel-slide img {
+    width: 300px;
+    height: 400px;
+    object-fit: contain;
+    display: block;    /* 防止图片底部出现间隙 */
+}
+
+.fragments .carousel-btn {
+    position: static;  /* 改为static而不是absolute */
+    background: white;
+    color: black;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.fragments .carousel-btn:hover {
+    background: white;  /* 保持hover时也是白色 */
+    transform: translateY(-0.5px);  /* 添加悬停效果 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.fragments .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;  /* 确保轨道宽度正确 */
+}
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
